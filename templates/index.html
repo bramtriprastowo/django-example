@@ -1,0 +1,21 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<h1>
+    Hello {{ name }}, you are {{ age }} years old.
+</h1>
+
+{% for feature in features %}
+<p>{{ feature.name }}</p>
+<p>{{ feature.details }}</p>
+{% endfor %}
+
+<h2>
+    Input your text below:
+</h2>
+<form method="POST" action="counter">
+    {% csrf_token %}
+    <textarea name="words" rows="20" cols="100"></textarea><br />
+    <button type="submit">Submit</button>
+</form>

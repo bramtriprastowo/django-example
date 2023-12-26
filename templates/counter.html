@@ -1,0 +1,9 @@
+<h2>The text is '{{ words }}'</h2>
+<h2>It has {{ amount_of_words }} words</h2>
+
+<!-- {% if ... %}
+{% endif %} -->
+
+{%  for post in posts %}
+<h1><a href="{% url 'post' post %}"></a></h1>
+{% endfor %}
